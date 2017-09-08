@@ -1,7 +1,7 @@
 var path = require('path')
 
 var settings = {
-  path: path.resolve('..'),
+  path: path.resolve(__dirname,'..'),
   port: process.env.NODE_PORT || 8000,
   database: {
     protocol: 'mysql',
@@ -11,5 +11,4 @@ var settings = {
     password: 'root'
   }
 }
-
 module.exports = settings

@@ -4,6 +4,8 @@ var settings = require('./settings')
 var models = require('../app/models/')
 
 module.exports = app => {
+  app.set('views',path.join(settings.path, 'public'))
+  app.set('view engine', 'pug')
   app.use(express.static(path.join(settings.path, 'public')))
   app.use((req, res, next) => {
     models((err,db) => {

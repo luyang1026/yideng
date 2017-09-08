@@ -4,8 +4,11 @@ module.exports = (req, res, next) => {
     if (err) return next(err)
     if (exist) {
       tu.find({},(err, item) => {
-        console.log("%d", item.length)
-        console.log(item)
+        item[0].total ++
+        item[0].save(err => {
+          if(err) return next(err)
+          res.json(item[0])
+        })
       })
     } else {
       tu.create({}, (err, result) => {
