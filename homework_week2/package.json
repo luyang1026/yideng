@@ -15,7 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.4",
-    "orm": "^3.2.4"
+    "mysql": "^2.14.1",
+    "orm": "^3.2.4",
+    "pug": "^2.0.0-rc.4"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
